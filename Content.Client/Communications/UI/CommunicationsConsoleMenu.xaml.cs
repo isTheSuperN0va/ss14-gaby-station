@@ -152,31 +152,6 @@ namespace Content.Client.Communications.UI
 
         public readonly object MaxAnnounceLength;
 
-        // maybe instead of storing the ids as strings here, get from loc in the button's tooltips? maybe later
-
-        public static readonly float DefaultL = 0.4f;
-
-        public readonly struct alertLevel {
-            public static readonly string Green = "green";
-            public static readonly Color GreenColor = Color.FromHsl(new Vector4(0.3f, 0.6f, DefaultL, 1.0f));
-            public static readonly string Blue = "blue";
-            public static readonly Color BlueColor = Color.FromHsl(new Vector4(0.66f, 0.6f, DefaultL, 1.0f));
-            public static readonly string Yellow = "yellow";
-            public static readonly Color YellowColor = Color.FromHsl(new Vector4(0.138f, 0.6f, DefaultL, 1.0f));
-            public static readonly string Red = "red";
-            public static readonly Color RedColor = Color.FromHsl(new Vector4(0.0f, 0.6f, DefaultL, 1.0f));
-            public static readonly string Violet = "violet";
-            public static readonly Color VioletColor = Color.FromHsl(new Vector4(0.8f, 0.6f, DefaultL, 1.0f));
-            public static readonly string Cyan = "cyan";
-            public static readonly Color CyanColor = Color.FromHsl(new Vector4(0.472f, 0.6f, DefaultL, 1.0f));
-
-            public alertLevel()
-            {
-
-            }
-
-        }
-
         public CommunicationsConsoleMenu()
         {
             IoCManager.InjectDependencies(this);
