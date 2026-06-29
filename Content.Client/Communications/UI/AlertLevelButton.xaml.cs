@@ -11,6 +11,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Utility;
 using Robust.Shared.Maths;
 using Robust.Client.Graphics;
+using System.Numerics;
 namespace Content.Client.Communications.UI;
 
 [GenerateTypedNameReferences]
@@ -34,6 +35,7 @@ public sealed partial class AlertLevelButton : Control
     }
 
     public readonly Color color;
+    public readonly Color colorToBlend = Color.FromHsl(new Vector4(0.0f, 0.0f, 0.3f, 1.0f));
     public readonly Color disabledColor;
 
     public AlertLevelButton(string alertLevel, Color color)
@@ -42,7 +44,7 @@ public sealed partial class AlertLevelButton : Control
         this.color = color;
 
 
-        disabledColor = Color.Blend(color, Color.Gray, Color.BlendFactor.Zero, Color.BlendFactor.DstColor);
+        disabledColor = Color.Blend(color, colorToBlend, Color.BlendFactor.Zero, Color.BlendFactor.DstColor);
 
         this.alertLevel = alertLevel;
 

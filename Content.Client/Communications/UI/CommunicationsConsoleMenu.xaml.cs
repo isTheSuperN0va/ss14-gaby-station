@@ -111,6 +111,7 @@ using System.ComponentModel;
 using System.Reflection.Metadata;
 using System.Security.Principal;
 using System.Timers;
+using Robust.Shared.Maths;
 
 namespace Content.Client.Communications.UI
 {
@@ -213,7 +214,14 @@ namespace Content.Client.Communications.UI
             if (alertLevels is not null) {
                 foreach (var (id, color) in alertLevels) {
                     var alertId = id;
-                    var button = new AlertLevelButton(alertId, color);
+
+
+                    // brighten color;
+                    var colorHsl = Color.ToHsl(color);
+                    colorHsl.W = colorHsl.W + 0.2f > 1 ? 1 : colorHsl.W + 0.2f;
+                    var newColor = Color.FromHsl(colorHsl);
+
+                    var button = new AlertLevelButton(alertId, newColor);
                     button.OnPressedAlertButton += _ => OnAlertLevel?.Invoke(alertId);
 
                     AlertLevelArea.AddChild(button);
