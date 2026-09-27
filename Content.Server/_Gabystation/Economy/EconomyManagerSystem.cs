@@ -260,7 +260,9 @@ namespace Content.Server._Gabystation.Economy
         public void SetAccountData(EconomyManagerComponent comp, int account, IBankAccount data)
         {
             if (!comp.BankAccounts.ContainsKey(account))
+            {
                 return;
+            }
 
             comp.BankAccounts[account] = data;
         }
