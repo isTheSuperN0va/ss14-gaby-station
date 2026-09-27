@@ -13,7 +13,7 @@ name: Test Packaging
 
 on:
   push:
-    branches: [ master, staging, stable ]
+    branches: [ dumont ]
     paths:
       - '**.cs'
       - '**.csproj'
@@ -64,11 +64,10 @@ jobs:
           cd RobustToolbox/
           git submodule update --init --recursive
 
-      # ubuntu-latest has .NET 10
-      # - name: Setup .NET Core
-      #   uses: actions/setup-dotnet@v5
-      #   with:
-      #     dotnet-version: 10.0.x
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
 
       - name: Install dependencies
         run: dotnet restore
