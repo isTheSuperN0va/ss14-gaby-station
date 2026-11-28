@@ -61,7 +61,7 @@ alert-level-epsilon-instructions = All former employees are to shelter in place 
 
 alert-level-gamma = Gamma
 alert-level-gamma-announcement = Central Command has ordered the Gamma security level on the station. 
-alert-level-gamma-instructions = Security is to have weapons equipped at all times, and all civilians are to immediately seek their nearest head for transportation to a secure location.
+alert-level-gamma-instructions = Security is to have weapons equipped at all times, all civilians are allowed to help the security department and must immediately seek their nearest head for transportation to a secure location.
 
 alert-level-omicron = Omicron
 alert-level-omicron-announcement = Station override activated. 

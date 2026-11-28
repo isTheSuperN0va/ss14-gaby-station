@@ -47,7 +47,7 @@ alert-level-epsilon-instructions = Todos os ex-empregados devem se manter parado
 
 alert-level-gamma = Gamma
 alert-level-gamma-announcement = Comando central ordenou o nível gama na estação.
-alert-level-gamma-instructions = Segurança deve ter armas equipadas a todo momento. Todos os cívis devem procurar os seus chefes mais próximos para transpote à uma area segura. 
+alert-level-gamma-instructions = Segurança deve ter armas equipadas a todo momento. Todos os cívis podem agora auxiliar o departamento de segurança e devem procurar os seus chefes mais próximos para transporte à uma area segura. 
 
 alert-level-omicron = Omicron
 alert-level-omicron-announcement = A central de comando tomou controle da estação.
